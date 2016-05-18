@@ -33,7 +33,7 @@ class LessCompiler implements PipeInterface
                 $css = $parser->getCss();
 
                 $file->setContent($css);
-                $file->setName(preg_replace('/less$/', 'css', $file->getName()));
+                $file->setDistpathname(preg_replace('/less$/', 'css', $file->getDistpathname()));
             }
         }
     }
