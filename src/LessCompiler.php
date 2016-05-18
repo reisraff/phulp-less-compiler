@@ -6,7 +6,7 @@ use Less_Parser;
 use Phulp\PipeInterface;
 use Phulp\Source;
 
-class LessCompiler extends PipeInterface
+class LessCompiler implements PipeInterface
 {
     /**
      * @var string $uri
@@ -27,12 +27,14 @@ class LessCompiler extends PipeInterface
     public function execute(Source $src)
     {
         foreach ($src->getDistFiles() as $key => $file) {
-            $parser = new Less_Parser();
-            $parser->parse($file->getContent(), $this->uri);
-            $css = $parser->getCss();
+            if (preg_match('/less$/', $file->getName())) {
+                $parser = new Less_Parser();
+                $parser->parse($file->getContent(), $this->uri);
+                $css = $parser->getCss();
 
-            $file->setContent($css);
-            $file->setName(preg_replace('/less$/', 'css', $file->getName()));
+                $file->setContent($css);
+                $file->setName(preg_replace('/less$/', 'css', $file->getName()));
+            }
         }
     }
 }
