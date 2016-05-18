@@ -1,0 +1,22 @@
+{
+    "name": "reisraff/phulp-less-compiler",
+    "description": "The less-compiler addon for phulp",
+    "keywords": ["phulp", "php", "less-compiler"],
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Rafael Reis",
+            "email": "reisraff@gmail.com"
+        }
+    ],
+    "autoload" : {
+        "psr-4" : {
+            "LessCompiler\\" : "src"
+        }
+    },
+    "require": {
+        "oyejorge/less.php": "v1.7.0.10",
+        "reisraff/phulp": "dev-master"
+    }
+}
