@@ -29,11 +29,11 @@ class LessCompiler implements PipeInterface
         foreach ($src->getDistFiles() as $key => $file) {
             if (preg_match('/less$/', $file->getName())) {
                 $parser = new Less_Parser();
-                $parser->parse($file->getContent(), $this->uri);
+                $parser->parseFile($file->getFullpath() . DIRECTORY_SEPARATOR . $file->getName(), $this->uri);
                 $css = $parser->getCss();
 
                 $file->setContent($css);
-                $file->setName(preg_replace('/less$/', 'css', $file->getName()));
+                $file->setDistpathname(preg_replace('/less$/', 'css', $file->getDistpathname()));
             }
         }
     }
