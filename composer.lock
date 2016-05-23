@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b4d9aeba6a2370ebd77c3fe8d97671e2",
-    "content-hash": "5301a06f30582b4369604f6f2ae87799",
+    "hash": "367239cac894b819abaf8985b9635519",
+    "content-hash": "1d7a07a773ba42a8af83a3a6ad7c71f8",
     "packages": [
         {
             "name": "oyejorge/less.php",
@@ -71,16 +71,16 @@
         },
         {
             "name": "reisraff/phulp",
-            "version": "dev-master",
+            "version": "0.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reisraff/phulp.git",
-                "reference": "dc4a256c1fd77f666b55b85c1be66e8d7c33f9fd"
+                "reference": "20a7cbcdebab4ecff9529a6977c5b0df34b25fca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reisraff/phulp/zipball/dc4a256c1fd77f666b55b85c1be66e8d7c33f9fd",
-                "reference": "dc4a256c1fd77f666b55b85c1be66e8d7c33f9fd",
+                "url": "https://api.github.com/repos/reisraff/phulp/zipball/20a7cbcdebab4ecff9529a6977c5b0df34b25fca",
+                "reference": "20a7cbcdebab4ecff9529a6977c5b0df34b25fca",
                 "shasum": ""
             },
             "require": {
@@ -113,11 +113,12 @@
                 }
             ],
             "description": "The task manager for php",
+            "homepage": "https://reisraff.github.io/phulp/dist/#!/home",
             "keywords": [
                 "php",
                 "phulp"
             ],
-            "time": "2016-05-18 16:46:41"
+            "time": "2016-05-23 15:23:05"
         },
         {
             "name": "symfony/finder",
@@ -172,9 +173,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "reisraff/phulp": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
