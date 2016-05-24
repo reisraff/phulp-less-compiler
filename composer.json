@@ -17,6 +17,6 @@
     },
     "require": {
         "oyejorge/less.php": "v1.7.0.10",
-        "reisraff/phulp": "0.0.1"
+        "reisraff/phulp": "~0.0.1"
     }
 }

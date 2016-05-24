@@ -5,7 +5,7 @@ The less-compiler addon for [PHULP](https://github.com/reisraff/phulp)
 ## Install
 
 ```bash
-$ composer require reisraff/phulp-less-compiler:0.0.1
+$ composer require reisraff/phulp-less-compiler:~0.0.2
 ```
 
 ## Usage
