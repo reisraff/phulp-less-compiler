@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "90a4b8a6b5c00531424e0c6389abaf76",
-    "content-hash": "b188ef7395e5a514d578ac0af3c13be7",
+    "hash": "9e05bbf9628337175e6cadad3196f952",
+    "content-hash": "3715709a78378b6564241f6ea8d0e7ff",
     "packages": [
         {
             "name": "oyejorge/less.php",
@@ -71,16 +71,16 @@
         },
         {
             "name": "reisraff/phulp",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reisraff/phulp.git",
-                "reference": "fc91f17ec4c0e6fd27b623d7ec0e86b8f2d1618e"
+                "reference": "67087a6c8fda3865cd44cc5194b28bfb0b673286"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reisraff/phulp/zipball/fc91f17ec4c0e6fd27b623d7ec0e86b8f2d1618e",
-                "reference": "fc91f17ec4c0e6fd27b623d7ec0e86b8f2d1618e",
+                "url": "https://api.github.com/repos/reisraff/phulp/zipball/67087a6c8fda3865cd44cc5194b28bfb0b673286",
+                "reference": "67087a6c8fda3865cd44cc5194b28bfb0b673286",
                 "shasum": ""
             },
             "require": {
@@ -119,7 +119,7 @@
                 "php",
                 "phulp"
             ],
-            "time": "2016-06-04 16:15:05"
+            "time": "2016-06-06 14:39:10"
         },
         {
             "name": "symfony/finder",
