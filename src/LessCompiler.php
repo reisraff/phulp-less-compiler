@@ -27,7 +27,7 @@ class LessCompiler implements PipeInterface
     public function execute(Source $src)
     {
         foreach ($src->getDistFiles() as $key => $file) {
-            if (preg_match('/less$/', $file->getName()) || preg_match('/less$/', $file->getDistpathname())) {
+            if (preg_match('/\.less$/', $file->getName()) || preg_match('/\.less$/', $file->getDistpathname())) {
                 $parser = new Less_Parser();
                 $parser->parseFile($file->getFullpath() . DIRECTORY_SEPARATOR . $file->getName(), $this->uri);
                 $css = $parser->getCss();
