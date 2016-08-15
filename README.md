@@ -1,6 +1,6 @@
 # phulp-less-compiler
 
-The less-compiler addon for [PHULP](https://github.com/reisraff/phulp)
+The less-compiler addon for [PHULP](https://github.com/reisraff/phulp). It's a wrapper for [less.php](https://github.com/oyejorge/less.php).
 
 ## Install
 
