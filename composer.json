@@ -12,11 +12,11 @@
     ],
     "autoload" : {
         "psr-4" : {
-            "LessCompiler\\" : "src"
+            "Phulp\\LessCompiler\\" : "src"
         }
     },
     "require": {
         "oyejorge/less.php": "v1.7.0.10",
-        "reisraff/phulp": "~1.0"
+        "reisraff/phulp": "~1.7"
     }
 }

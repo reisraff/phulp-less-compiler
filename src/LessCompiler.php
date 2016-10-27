@@ -1,6 +1,6 @@
 <?php
 
-namespace LessCompiler;
+namespace Phulp\LessCompiler;
 
 use Less_Parser;
 use Phulp\PipeInterface;
@@ -9,16 +9,18 @@ use Phulp\Source;
 class LessCompiler implements PipeInterface
 {
     /**
-     * @var string $uri
+     * @var array $options
      */
-    private $uri;
+    private $options = [
+        'uri' => null,
+    ];
 
     /**
-     * @param string $uri
+     * @param array $options
      */
-    public function __construct($uri = null)
+    public function __construct(array $options = [])
     {
-        $this->uri = $uri;
+        $this->options = array_merge($this->options, $options);
     }
 
     /**
@@ -29,7 +31,10 @@ class LessCompiler implements PipeInterface
         foreach ($src->getDistFiles() as $key => $file) {
             if (preg_match('/\.less$/', $file->getName()) || preg_match('/\.less$/', $file->getDistpathname())) {
                 $parser = new Less_Parser();
-                $parser->parseFile($file->getFullpath() . DIRECTORY_SEPARATOR . $file->getName(), $this->uri);
+                $parser->parseFile(
+                    $file->getFullpath() . DIRECTORY_SEPARATOR . $file->getName(),
+                    $this->options['uri']
+                );
                 $css = $parser->getCss();
 
                 $file->setContent($css);

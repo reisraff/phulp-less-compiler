@@ -5,7 +5,7 @@ The less-compiler addon for [PHULP](https://github.com/reisraff/phulp). It's a w
 ## Install
 
 ```bash
-$ composer require reisraff/phulp-less-compiler:~0.0.2
+$ composer require reisraff/phulp-less-compiler
 ```
 
 ## Usage
@@ -13,20 +13,12 @@ $ composer require reisraff/phulp-less-compiler:~0.0.2
 ```php
 <?php
 
-use Phulp\Phulp;
-use LessCompiler\LessCompiler;
+use Phulp\LessCompiler\LessCompiler;
 
-class PhulpFile extends Phulp
-{
-    public function define()
-    {
-        Phulp::task('less', function () {
-            Phulp::src(['src/'], '/css$/')
-                ->pipe(new LessCompiler)
-                ->pipe(Phulp::dest('dist'));
-        });
-    }
-}
+$phulp->task('less', function ($phulp) {
+    $phulp->src(['src/'], '/css$/')
+        ->pipe(new LessCompiler);
+});
 
 ```
 
@@ -37,8 +29,8 @@ class PhulpFile extends Phulp
 ```php
 <?php
 
-use LessCompiler\LessCompiler;
+use Phulp\LessCompiler\LessCompiler;
 
-$compiler = new LessCompiler('../../');
+$compiler = new LessCompiler(['uri' => '../../']);
 
 ```
