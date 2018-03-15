@@ -17,7 +17,10 @@ use Phulp\LessCompiler\LessCompiler;
 
 $phulp->task('less', function ($phulp) {
     $phulp->src(['src/'], '/css$/')
-        ->pipe(new LessCompiler);
+        // compile
+        ->pipe(new LessCompiler)
+        // write your compiled files
+        ->pipe($phulp->dest('dist/'));
 });
 
 ```
@@ -31,6 +34,9 @@ $phulp->task('less', function ($phulp) {
 
 use Phulp\LessCompiler\LessCompiler;
 
-$compiler = new LessCompiler(['uri' => '../../']);
+$compiler = new LessCompiler([
+    // default: null
+    'uri' => '../../'
+]);
 
 ```

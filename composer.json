@@ -1,7 +1,7 @@
 {
     "name": "reisraff/phulp-less-compiler",
-    "description": "The less-compiler addon for phulp",
-    "keywords": ["phulpplugin", "phulp", "php", "less-compiler"],
+    "description": "Compile your less files",
+    "keywords": ["phulpplugin", "phulp", "php", "less-compiler", "less", "compiler-addon"],
     "license": "MIT",
     "type": "library",
     "authors": [
